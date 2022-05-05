@@ -1,0 +1,22 @@
+#Config MongoDB
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/cat
+
+#Config Metrics
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'metrics, prometheus'
+    enabled-by-default: false
+  endpoint:
+    metrics:
+      enabled: true
+    prometheus:
+      enabled: true
+
+springdoc:
+  swagger-ui:
+    path: "/docs"
